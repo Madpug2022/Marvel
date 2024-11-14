@@ -1,0 +1,12 @@
+@use '../../styles/variables.scss' as v;
+
+.header{
+    height: 4.5rem;
+    background-color: v.$nav-background; 
+    padding: 1rem 2rem;
+
+    &__logo{
+        height: 100%;
+        width: 128px;
+    }
+}

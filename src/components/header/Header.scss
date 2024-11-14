@@ -1,12 +1,40 @@
-@use '../../styles/variables.scss' as v;
+@use "../../styles/variables.scss" as v;
 
-.header{
-    height: 4.5rem;
-    background-color: v.$nav-background; 
-    padding: 1rem 2rem;
+.header {
+  height: 4.5rem;
+  background-color: v.$nav-background;
+  padding: 0.7rem 1rem;
+  display: flex;
+  justify-content: space-between;
 
-    &__logo{
-        height: 100%;
-        width: 128px;
+  &__logo {
+    height: 100%;
+    width: 120px;
+
+    img {
+      height: 100%;
+      width: 100%;
     }
+  }
+
+  &__favorites {
+    height: 100%;
+    padding: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__icon {
+      color: red;
+      height: 25px;
+      width: 25px;
+    }
+
+    &__text {
+      color: #fff;
+      font-weight: 500;
+      font-size: 16px;
+      margin-left: 0.5rem;
+    }
+  }
 }

@@ -1,6 +1,6 @@
 import "./Header.scss";
 import logo from "../../assets/images/marvel-logo.png";
-import { AiFillHeart } from "react-icons/ai";
+import FavouritesCounter from "../favouritesCounter/FavouritesCounter";
 
 function Header() {
   return (
@@ -8,10 +8,7 @@ function Header() {
       <div className="header__logo">
         <img src={logo} alt="Marvel Logo" />
       </div>
-      <section className="header__favorites">
-        <AiFillHeart className="header__favorites__icon" />
-        <span className="header__favorites__text">0</span>
-      </section>
+      <FavouritesCounter />
     </header>
   );
 }

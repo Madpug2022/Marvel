@@ -15,7 +15,7 @@ const CharacterCard = ({ character }: { character: CharactersI }) => {
         />
       </div>
       <div className="character-card__info">
-        <p>{character.name}</p>
+        <a href={`/${character.id}`}>{character.name}</a>
         <button>
           <IoIosHeartEmpty className="icon unfavorited" />
         </button>

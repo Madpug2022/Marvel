@@ -6,7 +6,6 @@ function Main({ children }: { children: ReactNode }) {
   return (
     <>
       <Header />
-      <SearchBar />
       {children}
     </>
   );

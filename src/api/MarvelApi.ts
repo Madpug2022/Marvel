@@ -8,10 +8,18 @@ const MARVEL_API = {
     );
     return response.json();
   },
-  getCharacter: async (id: number) => {
+  getCharacterById: async (id: number) => {
     const response = await fetch(
       `${marvelUrl}/characters/${id}?apikey=${api_key}`
     );
+    return response.json();
+  },
+  getCharacterByName: async (name: string) => {
+    console.log(name);
+    const response = await fetch(
+      `${marvelUrl}/characters?name=${name}&apikey=${api_key}`
+    );
+    console.log(response);
     return response.json();
   },
 };

@@ -10,8 +10,6 @@ function CharacterDisplay() {
 
   const results: CharactersI[] = characters?.data?.results || [];
 
-  console.log(results);
-
   if (isLoading) return <Loader />;
 
   if (error) return <Error />;

@@ -5,9 +5,9 @@ import FavouritesCounter from "../favouritesCounter/FavouritesCounter";
 function Header() {
   return (
     <header className="header">
-      <div className="header__logo">
+      <a href="/" className="header__logo">
         <img src={logo} alt="Marvel Logo" />
-      </div>
+      </a>
       <FavouritesCounter />
     </header>
   );

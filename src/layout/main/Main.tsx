@@ -1,13 +1,15 @@
 import { ReactNode } from "react";
 import Header from "../../components/header/Header";
+import SearchBar from "../../components/SearchBar/SearchBar";
 
-function Main({children} : {children: ReactNode}) {
-return (
+function Main({ children }: { children: ReactNode }) {
+  return (
     <>
-    <Header/>
-    {children}
+      <Header />
+      <SearchBar />
+      {children}
     </>
-)
+  );
 }
 
-export default Main
+export default Main;

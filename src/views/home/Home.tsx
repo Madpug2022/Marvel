@@ -4,7 +4,8 @@ import Main from "../../layout/main/Main";
 function Home() {
   return (
     <Main>
-      <CharacterDisplay />
+      <></>
+      {/*<CharacterDisplay />*/}
     </Main>
   );
 }

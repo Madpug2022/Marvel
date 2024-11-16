@@ -1,12 +1,23 @@
-@use './variables.scss' as v;
+@use "./variables.scss" as v;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins";
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 body {
- background-color: v.$main-background;
+  background-color: v.$main-background;
+}
+
+input {
+  border: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }

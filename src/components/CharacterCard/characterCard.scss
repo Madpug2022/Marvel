@@ -1,0 +1,68 @@
+.character-card {
+  max-width: 188px;
+  max-height: 246px;
+  height: 246px;
+  width: 188px;
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 90% 100%, 0 100%);
+
+  &__image {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    position: relative;
+    overflow: hidden;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #f1f1f1;
+    height: 20%;
+    background-color: #000;
+    border-top: 3px solid #ec1d24;
+
+    & button {
+      z-index: 3;
+
+      & .icon {
+        height: 15px;
+        width: 15px;
+      }
+
+      & .unfavorited {
+        color: #f1f1f1;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0%;
+      background-color: red;
+      z-index: 2;
+      transition: height 0.5s ease;
+    }
+
+    & p {
+      position: relative;
+      z-index: 3;
+      max-width: 80%;
+      font-size: 14px;
+    }
+  }
+
+  &:hover .character-card__info::before {
+    height: 100%;
+  }
+}

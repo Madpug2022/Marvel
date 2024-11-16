@@ -5,7 +5,7 @@ function Home() {
   return (
     <Main>
       <></>
-      {/*<CharacterDisplay />*/}
+      <CharacterDisplay />
     </Main>
   );
 }

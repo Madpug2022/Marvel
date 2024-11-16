@@ -1,28 +1,20 @@
-import MARVEL_API from "../../api/MarvelApi";
+import { useMainContext } from "../../contexts/MainContext";
+import Error from "../ui/Error/Error";
+import Loader from "../ui/loader/Loader";
 import "./CharactersDisplay.scss";
-import { useQuery } from "react-query";
 
 function CharacterDisplay() {
-  const limit = 50;
+  const { characters, isLoading, error } = useMainContext();
 
-  const {
-    data: characters,
-    isLoading,
-    error,
-  } = useQuery(["characters", limit], () => MARVEL_API.getCharacters(limit), {
-    staleTime: 24 * 60 * 60 * 1000,
-    cacheTime: 24 * 60 * 60 * 1000,
-  });
+  const results = characters?.data?.results || [];
 
-  if (isLoading) return <div>Cargando...</div>;
+  console.log(results);
 
-  if (error) return <div>Error al cargar los personajes</div>;
+  if (isLoading) return <Loader />;
 
-  return (
-    <div>
-      <h1>Character Display</h1>
-    </div>
-  );
+  if (error) return <Error />;
+
+  return <div className="characters-display"></div>;
 }
 
 export default CharacterDisplay;

@@ -1,6 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import FavouritesCounter from "./FavouritesCounter";
-import { MainProvider } from "../../contexts/MainContext";
 import "@testing-library/jest-dom";
 
 const mockSetDisplayFavorites = jest.fn();

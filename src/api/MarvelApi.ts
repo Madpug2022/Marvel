@@ -8,7 +8,7 @@ const MARVEL_API = {
     );
     return response.json();
   },
-  getCharacterById: async (id: number) => {
+  getCharacterById: async (id: string) => {
     const response = await fetch(
       `${marvelUrl}/characters/${id}?apikey=${api_key}`
     );
@@ -20,6 +20,10 @@ const MARVEL_API = {
       `${marvelUrl}/characters?name=${name}&apikey=${api_key}`
     );
     console.log(response);
+    return response.json();
+  },
+  getComics: async (collectionURI: string) => {
+    const response = await fetch(`${collectionURI}?apikey=${api_key}`);
     return response.json();
   },
 };

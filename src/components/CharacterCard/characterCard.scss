@@ -29,19 +29,6 @@
     background-color: #000;
     border-top: 3px solid #ec1d24;
 
-    & button {
-      z-index: 3;
-
-      & .icon {
-        height: 15px;
-        width: 15px;
-      }
-
-      & .unfavorited {
-        color: #f1f1f1;
-      }
-    }
-
     &::before {
       content: "";
       position: absolute;

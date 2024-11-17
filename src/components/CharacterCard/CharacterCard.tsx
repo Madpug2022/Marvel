@@ -1,7 +1,7 @@
 import { CharactersI } from "../../interfaces/Characters";
-import { IoIosHeartEmpty, IoMdHeart } from "react-icons/io";
 
 import "./characterCard.scss";
+import FavoriteButton from "../FavoriteButton/FavoriteButton";
 
 const CharacterCard = ({ character }: { character: CharactersI }) => {
   const portraitRatio = "portrait_xlarge";
@@ -16,9 +16,7 @@ const CharacterCard = ({ character }: { character: CharactersI }) => {
       </div>
       <div className="character-card__info">
         <a href={`/${character.id}`}>{character.name}</a>
-        <button>
-          <IoIosHeartEmpty className="icon unfavorited" />
-        </button>
+        <FavoriteButton />
       </div>
     </li>
   );

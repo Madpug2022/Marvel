@@ -15,13 +15,13 @@ function CharacterDisplay() {
   if (error) return <Error />;
 
   return (
-    <div className="characters-display">
+    <main className="characters-display">
       <ul className="characters-display__list">
         {results.map((character: CharactersI) => (
           <CharacterCard key={character.id} character={character} />
         ))}
       </ul>
-    </div>
+    </main>
   );
 }
 

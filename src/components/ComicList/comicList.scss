@@ -1,0 +1,22 @@
+.comic-list {
+  max-width: 960px;
+
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  h3 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 37.5px;
+  }
+
+  &__list {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    gap: 15px;
+  }
+}

@@ -59,7 +59,7 @@ function Character() {
             <div className="description__info">
               <div className="description__info__name">
                 <h2>{result.name}</h2>
-                <FavoriteButton />
+                <FavoriteButton character={result} />
               </div>
               <p>{result.description}</p>
             </div>

@@ -5,6 +5,11 @@
   align-items: center;
   justify-content: center;
 
+  & button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   &__icon {
     color: red;
     height: 25px;

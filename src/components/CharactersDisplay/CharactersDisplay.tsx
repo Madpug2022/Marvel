@@ -6,7 +6,8 @@ import Loader from "../ui/loader/Loader";
 import "./CharactersDisplay.scss";
 
 function CharacterDisplay() {
-  const { characters, isLoading, error } = useMainContext();
+  const { characters, isLoading, error, favorites, displayFavorites } =
+    useMainContext();
 
   const results: CharactersI[] = characters?.data?.results || [];
 
@@ -17,9 +18,13 @@ function CharacterDisplay() {
   return (
     <main className="characters-display">
       <ul className="characters-display__list">
-        {results.map((character: CharactersI) => (
-          <CharacterCard key={character.id} character={character} />
-        ))}
+        {displayFavorites
+          ? favorites.map((character: CharactersI) => (
+              <CharacterCard key={character.id} character={character} />
+            ))
+          : results.map((character: CharactersI) => (
+              <CharacterCard key={character.id} character={character} />
+            ))}
       </ul>
     </main>
   );

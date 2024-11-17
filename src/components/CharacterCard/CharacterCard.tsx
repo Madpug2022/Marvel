@@ -16,7 +16,7 @@ const CharacterCard = ({ character }: { character: CharactersI }) => {
       </div>
       <div className="character-card__info">
         <a href={`/${character.id}`}>{character.name}</a>
-        <FavoriteButton />
+        <FavoriteButton character={character} />
       </div>
     </li>
   );

@@ -19,7 +19,6 @@ const MARVEL_API = {
     const response = await fetch(
       `${marvelUrl}/characters?name=${name}&apikey=${api_key}`
     );
-    console.log(response);
     return response.json();
   },
   getComics: async (collectionURI: string) => {

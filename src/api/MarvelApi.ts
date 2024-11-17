@@ -17,7 +17,7 @@ const MARVEL_API = {
   getCharacterByName: async (name: string) => {
     console.log(name);
     const response = await fetch(
-      `${marvelUrl}/characters?name=${name}&apikey=${api_key}`
+      `${marvelUrl}/characters?nameStartsWith=${name}&apikey=${api_key}`
     );
     return response.json();
   },

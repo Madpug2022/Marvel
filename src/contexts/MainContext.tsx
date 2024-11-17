@@ -3,7 +3,6 @@ import {
   useState,
   useCallback,
   useMemo,
-  useContext,
   useEffect,
 } from "react";
 import MARVEL_API from "../api/MarvelApi";
@@ -11,7 +10,8 @@ import { useQuery } from "react-query";
 import LOCAL_API from "../api/LocalApi";
 import { CharactersI } from "../interfaces/Characters";
 
-interface MainContextValue {
+export interface MainContextValue {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   characters: any;
   isLoading: boolean;
   error: unknown;
@@ -98,12 +98,4 @@ export const MainProvider = ({ children }: { children: React.ReactNode }) => {
   return (
     <MainContext.Provider value={contextValue}>{children}</MainContext.Provider>
   );
-};
-
-export const useMainContext = (): MainContextValue => {
-  const context = useContext(MainContext);
-  if (!context) {
-    throw new Error("useMainContext debe usarse dentro de un MainProvider");
-  }
-  return context;
 };

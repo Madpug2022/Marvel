@@ -12,16 +12,12 @@ import ComicList from "../../components/ComicList/ComicList";
 function Character() {
   const { id } = useParams();
 
-  if (!id) {
-    return null;
-  }
-
   const STALE_TIME = 24 * 60 * 60 * 1000;
   const CACHE_TIME = 24 * 60 * 60 * 1000;
 
   const { data, isLoading, error } = useQuery(
     ["character", id],
-    () => MARVEL_API.getCharacterById(id),
+    () => MARVEL_API.getCharacterById(id as string),
     {
       staleTime: STALE_TIME,
       cacheTime: CACHE_TIME,

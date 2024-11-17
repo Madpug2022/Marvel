@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { useMainContext } from "../../contexts/MainContext";
 import { CharactersI } from "../../interfaces/Characters";
 import "./SearchBar.scss";
 import { IoSearchSharp } from "react-icons/io5";
+import { useMainContext } from "../../hooks/useMainContext";
 
 function SearchBar() {
   const [searchInput, setSearchInput] = useState("");

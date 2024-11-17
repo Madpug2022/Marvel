@@ -1,4 +1,4 @@
-import { useMainContext } from "../../contexts/MainContext";
+import { useMainContext } from "../../hooks/useMainContext";
 import { CharactersI } from "../../interfaces/Characters";
 import CharacterCard from "../CharacterCard/CharacterCard";
 import Error from "../ui/Error/Error";

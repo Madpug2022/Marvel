@@ -1,7 +1,9 @@
+import { CharactersI } from "../interfaces/Characters";
+
 const localUrl = "http://localhost:3001";
 
 const LOCAL_API = {
-  addTofavorites: async (character: any) => {
+  addTofavorites: async (character: CharactersI) => {
     const characterWithStringId = {
       ...character,
       id: String(character.id),

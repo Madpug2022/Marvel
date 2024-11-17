@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import LOCAL_API from "../../api/LocalApi";
-import { useMainContext } from "../../contexts/MainContext";
 import { CharactersI } from "../../interfaces/Characters";
 import "./favoriteButton.scss";
 import { IoIosHeartEmpty, IoMdHeart } from "react-icons/io";
+import { useMainContext } from "../../hooks/useMainContext";
 
 function FavoriteButton({ character }: { character: CharactersI }) {
   const { favorites, setFavorites } = useMainContext();

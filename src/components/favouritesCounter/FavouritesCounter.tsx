@@ -1,6 +1,6 @@
 import { AiFillHeart } from "react-icons/ai";
 import "./FavouritesCounter.scss";
-import { useMainContext } from "../../contexts/MainContext";
+import { useMainContext } from "../../hooks/useMainContext";
 
 function FavouritesCounter() {
   const { favorites, setDisplayFavorites, displayFavorites } = useMainContext();

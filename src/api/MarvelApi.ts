@@ -1,5 +1,5 @@
 const marvelUrl = "https://gateway.marvel.com:443/v1/public";
-const api_key = import.meta.env.VITE_API_KEY;
+const api_key = process.env.VITE_API_KEY;
 
 const MARVEL_API = {
   getCharacters: async (limit: number) => {

@@ -32,11 +32,18 @@ function FavoriteButton({ character }: { character: CharactersI }) {
   };
 
   return (
-    <button className="favorite-btn" onClick={handleFavorite}>
+    <button
+      className="favorite-btn"
+      onClick={handleFavorite}
+      data-testid="favorite-btn"
+    >
       {isFavorite ? (
-        <IoMdHeart className="icon favorited" />
+        <IoMdHeart className="icon favorited" data-testid="heart-filled" />
       ) : (
-        <IoIosHeartEmpty className="icon unfavorited" />
+        <IoIosHeartEmpty
+          className="icon unfavorited"
+          data-testid="heart-empty"
+        />
       )}
     </button>
   );

@@ -4,6 +4,7 @@ export interface CharactersI {
   description: string;
   modified: string;
   thumbnail: ThumbnailI;
+  resourceURI: string;
   comics: ComicsI;
   events: EventsI;
   series: SeriesI;
@@ -26,6 +27,7 @@ interface ComicsI {
 interface ItemsI {
   resourceURI: string;
   name: string;
+  type?: string;
 }
 
 interface EventsI {

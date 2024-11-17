@@ -1,50 +1,26 @@
-# React + TypeScript + Vite
+# Marvel Searcher
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Requeriments
+- Node v22.6 
+- NPM v10.8.2
 
-Currently, two official plugins are available:
+## Instalation method
+1 - Clone the repository in your local <br>
+2- Run ```npm install, or yarn install, or pnpm dev ``` <br>
+3- Change the name of the file ```example.env to .env``` (Personal information in env files should be kept secret and should not be shared with others. But for the sake of this project, I am sharing it) <br>
+4- The aplication uses a localhost json server. To run it, run the command ```npm run server``` in a terminal: This will initialize a localhost server in port 3001 wich is required for the favorites list <br>
+5- Run the aplication using ```npm run dev```: The aplication will run in http://localhost:5173/ <br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Preview
 
-## Expanding the ESLint configuration
+![Captura de pantalla 2024-11-17 201427](https://github.com/user-attachments/assets/6e7ade42-8a51-47ff-ba86-f8a5d32690c7)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+![Captura de pantalla 2024-11-17 202202](https://github.com/user-attachments/assets/141f8b6c-a17f-4556-aa50-589b340f65c4)
 
-- Configure the top-level `parserOptions` property like this:
+![Captura de pantalla 2024-11-17 202249](https://github.com/user-attachments/assets/bb464a3b-b090-4d18-a9fa-21329d1b15f5)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Tests
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+The application uses Jest and react testing component. Has come minor integration tests
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+To run the tests simply use ```npm run test```
